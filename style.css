@@ -4,43 +4,119 @@
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #fff8f8;
-    color: #333;
+    font-family: Arial, "Tahoma", sans-serif;
+    background: #fff7fa;
+    color: #444;
 }
 
+/* เมนู */
 nav {
     background: white;
-    padding: 20px;
+    padding: 18px 10px;
     text-align: center;
-    box-shadow: 0 2px 10px #ddd;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 nav a {
+    display: inline-block;
     text-decoration: none;
     color: #555;
-    margin: 0 12px;
+    margin: 5px 10px;
+    padding: 8px 12px;
+    border-radius: 20px;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 nav a:hover {
-    color: #d66;
+    background: #f7c9d8;
+    color: white;
 }
 
+/* หน้าแรก */
 .hero {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 120px 20px;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #fff0f5, #fce1eb);
 }
 
 .hero h1 {
-    font-size: 55px;
-    margin-bottom: 10px;
+    font-size: 60px;
+    margin: 0;
+    color: #d66b91;
+    letter-spacing: 3px;
 }
 
 .hero h2 {
-    font-size: 35px;
+    font-size: 38px;
+    margin: 15px 0;
+    color: #555;
 }
 
 .hero p {
-    font-size: 20px;
+    font-size: 22px;
+    color: #777;
+}
+
+/* เนื้อหาทุกหน้า */
+.content {
+    max-width: 1000px;
+    margin: auto;
+    padding: 60px 25px;
+}
+
+.content h1 {
+    text-align: center;
+    font-size: 42px;
+    color: #d66b91;
+    margin-bottom: 40px;
+}
+
+.content h2 {
+    color: #c85f84;
+}
+
+/* กล่องข้อมูล */
+.card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    border: 1px solid #f5d9e2;
+}
+
+.card p {
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+/* มือถือ */
+@media (max-width: 700px) {
+
+    nav a {
+        margin: 3px;
+        padding: 7px 8px;
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .content h1 {
+        font-size: 34px;
+    }
 }
