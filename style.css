@@ -211,3 +211,106 @@ nav a:hover {
     display: block;
     margin: 0 auto 20px;
 }
+/* ===== หน้าปก Portfolio ===== */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 85vh;
+    background: linear-gradient(135deg, #fff7fa, #ffeaf2);
+}
+
+.cover-photo {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 25px;
+    border: 6px solid white;
+    box-shadow: 0 5px 20px rgba(214,107,145,0.25);
+}
+
+.hero h1 {
+    font-size: 58px;
+    color: #d66b91;
+    letter-spacing: 4px;
+    margin: 10px 0;
+}
+
+.hero h2 {
+    font-size: 38px;
+    color: #555;
+    margin: 10px 0;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #777;
+}
+
+.small-text {
+    margin-top: 20px;
+    color: #c97996;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+/* ของตกแต่ง */
+.decor {
+    position: absolute;
+    color: #e58ba8;
+    font-size: 35px;
+}
+
+.heart1 {
+    top: 15%;
+    left: 12%;
+}
+
+.heart2 {
+    top: 25%;
+    right: 15%;
+}
+
+.star1 {
+    top: 40%;
+    left: 8%;
+    font-size: 30px;
+}
+
+.star2 {
+    bottom: 20%;
+    right: 12%;
+    font-size: 40px;
+}
+
+.bow {
+    top: 10%;
+    right: 8%;
+    font-size: 45px;
+}
+
+@media (max-width: 700px) {
+
+    .cover-photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .decor {
+        font-size: 25px;
+    }
+}
