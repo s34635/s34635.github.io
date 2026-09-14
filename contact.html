@@ -3,12 +3,235 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>ติดต่อ | Portfolio</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* ===== หน้าติดต่อ ===== */
+
+        .contact-page {
+            max-width: 1000px;
+            margin: auto;
+            padding: 60px 25px 90px;
+            position: relative;
+        }
+
+        /* หัวข้อ */
+        .contact-title {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .contact-title h1 {
+            font-size: 45px;
+            color: #d66b91;
+            margin: 0;
+        }
+
+        .contact-title p {
+            color: #888;
+            font-size: 17px;
+            margin-top: 12px;
+        }
+
+        .heart-line {
+            width: 120px;
+            height: 4px;
+            background: #e8a6bb;
+            border-radius: 20px;
+            margin: 22px auto 45px;
+            position: relative;
+        }
+
+        .heart-line::after {
+            content: "♥";
+            position: absolute;
+            left: 50%;
+            top: -14px;
+            transform: translateX(-50%);
+            background: #fff7fa;
+            padding: 0 10px;
+            color: #d66b91;
+            font-size: 20px;
+        }
+
+        /* กล่องติดต่อ */
+        .contact-card {
+            background: rgba(255,255,255,0.96);
+            border: 1px solid #f2d5df;
+            border-radius: 28px;
+            padding: 35px;
+            margin-bottom: 30px;
+
+            box-shadow: 0 10px 30px rgba(214,107,145,0.12);
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-card::before {
+            content: "♡";
+            position: absolute;
+            top: 12px;
+            right: 22px;
+            font-size: 40px;
+            color: #f1c5d3;
+        }
+
+        .contact-card h2 {
+            color: #c85f84;
+            font-size: 25px;
+            margin-top: 0;
+            margin-bottom: 25px;
+        }
+
+        /* รายการช่องทาง */
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+
+            background: #fff7fa;
+            border: 1px solid #f4dce4;
+
+            padding: 18px 20px;
+            margin: 15px 0;
+
+            border-radius: 18px;
+
+            transition: 0.3s;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 7px 18px rgba(214,107,145,0.15);
+        }
+
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #f7c9d8;
+            border-radius: 50%;
+
+            font-size: 22px;
+            flex-shrink: 0;
+        }
+
+        .contact-text {
+            text-align: left;
+        }
+
+        .contact-text strong {
+            display: block;
+            color: #c85f84;
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+
+        .contact-text span {
+            color: #666;
+            font-size: 16px;
+            word-break: break-word;
+        }
+
+        /* ข้อความแนะนำตัว */
+        .intro-box {
+            text-align: center;
+            background: linear-gradient(135deg, #fff0f5, #fce1eb);
+            border-radius: 28px;
+            padding: 40px 30px;
+            margin-top: 35px;
+
+            border: 1px solid #f1d0dc;
+        }
+
+        .intro-box .big-heart {
+            font-size: 42px;
+            color: #d66b91;
+            margin-bottom: 10px;
+        }
+
+        .intro-box h2 {
+            color: #c85f84;
+            margin: 5px 0 15px;
+            font-size: 28px;
+        }
+
+        .intro-box p {
+            color: #666;
+            line-height: 1.9;
+            font-size: 16px;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        /* คำพูดปิดท้าย */
+        .quote {
+            text-align: center;
+            margin-top: 45px;
+            color: #999;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        .quote span {
+            color: #d66b91;
+            font-size: 22px;
+        }
+
+        /* มือถือ */
+        @media (max-width: 700px) {
+
+            .contact-page {
+                padding: 45px 15px 70px;
+            }
+
+            .contact-title h1 {
+                font-size: 36px;
+            }
+
+            .contact-card {
+                padding: 25px 18px;
+            }
+
+            .contact-card h2 {
+                font-size: 22px;
+            }
+
+            .contact-item {
+                padding: 15px;
+                gap: 12px;
+            }
+
+            .contact-icon {
+                width: 42px;
+                height: 42px;
+                font-size: 19px;
+            }
+
+            .contact-text span {
+                font-size: 14px;
+            }
+
+            .intro-box {
+                padding: 30px 20px;
+            }
+        }
+
+    </style>
 </head>
 
 <body>
 
+<!-- ===== เมนู ===== -->
 <nav>
     <a href="index.html">หน้าแรก</a>
     <a href="about.html">ประวัติ</a>
@@ -19,24 +242,92 @@
     <a href="contact.html">ติดต่อ</a>
 </nav>
 
-<section class="content">
 
-    <h1>ติดต่อ</h1>
+<!-- ===== เนื้อหา ===== -->
+<section class="contact-page">
 
-    <div class="card">
-        <h2>ช่องทางการติดต่อ</h2>
+    <div class="contact-title">
 
-        <p><b>ชื่อ:</b> นริศรา ยืนยิ่ง</p>
-        <p><b>Instagram:</b>ch4xq </p>
-        <p><b>Email:</b> s34635@banbung.ac.th</p>
+        <h1>ติดต่อ</h1>
+
+        <p>
+            ช่องทางสำหรับติดต่อและทำความรู้จักกับฉัน
+        </p>
+
+        <div class="heart-line"></div>
+
     </div>
 
-    <div class="card">
+
+    <!-- ช่องทางการติดต่อ -->
+    <div class="contact-card">
+
+        <h2>♡ ช่องทางการติดต่อ</h2>
+
+        <div class="contact-item">
+
+            <div class="contact-icon">👤</div>
+
+            <div class="contact-text">
+                <strong>ชื่อ</strong>
+                <span>นริศรา ยืนยิ่ง</span>
+            </div>
+
+        </div>
+
+
+        <div class="contact-item">
+
+            <div class="contact-icon">📷</div>
+
+            <div class="contact-text">
+                <strong>Instagram</strong>
+                <span>ch4xq</span>
+            </div>
+
+        </div>
+
+
+        <div class="contact-item">
+
+            <div class="contact-icon">✉️</div>
+
+            <div class="contact-text">
+                <strong>Email</strong>
+                <span>s34635@banbung.ac.th</span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ข้อความแนะนำ -->
+    <div class="intro-box">
+
+        <div class="big-heart">♡</div>
+
         <h2>ขอบคุณที่เข้าชม Portfolio</h2>
+
         <p>
-            ขอบคุณสำหรับการเยี่ยมชมเว็บไซต์ Portfolio
-            และทำความรู้จักกับผลงานและประสบการณ์ของฉัน
+            ขอบคุณสำหรับการเยี่ยมชมเว็บไซต์ Portfolio ของฉัน
+            เว็บไซต์นี้รวบรวมประวัติการศึกษา กิจกรรม ผลงาน
+            และประสบการณ์ต่าง ๆ ที่ได้เรียนรู้และพัฒนาตัวเอง
+            ตลอดช่วงการเรียนที่ผ่านมา
         </p>
+
+    </div>
+
+
+    <!-- ปิดท้าย -->
+    <div class="quote">
+
+        <span>♥</span>
+
+        <br>
+
+        “ทุกประสบการณ์ คืออีกหนึ่งก้าวของการเติบโต”
+
     </div>
 
 </section>
