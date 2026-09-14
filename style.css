@@ -5,16 +5,19 @@
 body {
     margin: 0;
     font-family: Arial, "Tahoma", sans-serif;
-    background: #fff7fa;
-    color: #444;
+    color: #555;
 }
 
-/* เมนู */
+/* =========================
+   เมนูด้านบน
+========================= */
+
 nav {
-    background: white;
+    background: rgba(255, 255, 255, 0.97);
     padding: 18px 10px;
     text-align: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+
     position: sticky;
     top: 0;
     z-index: 100;
@@ -24,59 +27,258 @@ nav a {
     display: inline-block;
     text-decoration: none;
     color: #555;
-    margin: 5px 10px;
-    padding: 8px 12px;
-    border-radius: 20px;
+
+    margin: 5px 12px;
+    padding: 9px 15px;
+
+    border-radius: 25px;
+
     font-weight: bold;
     transition: 0.3s;
 }
 
 nav a:hover {
-    background: #f7c9d8;
+    background: #f5b8cc;
     color: white;
 }
 
-/* หน้าแรก */
+
+/* =========================
+   หน้าปก Portfolio
+========================= */
+
 .hero {
-    min-height: 80vh;
+    min-height: calc(100vh - 70px);
+
+    position: relative;
+    overflow: hidden;
+
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+
     text-align: center;
-    padding: 40px 20px;
-    background: linear-gradient(135deg, #fff0f5, #fce1eb);
+
+    background-image:
+        linear-gradient(
+            rgba(255, 230, 240, 0.30),
+            rgba(255, 230, 240, 0.30)
+        ),
+        url("cover.png");
+
+    background-size: cover;
+    background-position: center;
 }
+
+
+/* ชั้นสีอ่อนบนรูป */
+
+.cover-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(255, 235, 243, 0.20);
+
+    z-index: 1;
+}
+
+
+/* เนื้อหาตรงกลาง */
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+
+    padding: 40px 25px;
+}
+
+
+/* =========================
+   ของตกแต่ง
+========================= */
+
+.bow {
+    font-size: 42px;
+    margin-bottom: 5px;
+}
+
+.decorations {
+    position: absolute;
+
+    top: 35px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 24px;
+
+    color: #d45f88;
+
+    z-index: 3;
+}
+
+
+/* =========================
+   PORTFOLIO
+========================= */
 
 .hero h1 {
-    font-size: 60px;
     margin: 0;
-    color: #d66b91;
+
+    font-size: clamp(45px, 7vw, 82px);
+
+    font-weight: 800;
+
     letter-spacing: 3px;
+
+    color: #d45f88;
+
+    /* ขอบขาว ทำให้ตัวหนังสืออ่านง่าย */
+    text-shadow:
+        3px 3px 0 white,
+        -3px -3px 0 white,
+        3px -3px 0 white,
+        -3px 3px 0 white;
 }
+
+
+/* =========================
+   ชื่อ นริศรา ยืนยิ่ง
+========================= */
 
 .hero h2 {
-    font-size: 38px;
-    margin: 15px 0;
+    margin: 18px 0 5px;
+
+    font-size: clamp(32px, 5vw, 58px);
+
+    font-weight: 800;
+
+    color: #444;
+
+    /* ทำให้ชื่อเด่นมากขึ้น */
+    text-shadow:
+        3px 3px 0 white,
+        -3px -3px 0 white,
+        3px -3px 0 white,
+        -3px 3px 0 white,
+        0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+/* เส้นตกแต่งใต้ชื่อ */
+
+.name-line {
+    width: 230px;
+    height: 8px;
+
+    margin: 8px auto 20px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    opacity: 0.95;
+}
+
+
+/* =========================
+   แผนการเรียน
+========================= */
+
+.study {
+    font-size: clamp(18px, 3vw, 28px);
+
+    font-weight: bold;
+
     color: #555;
+
+    text-shadow:
+        2px 2px 0 white,
+        -2px -2px 0 white,
+        2px -2px 0 white,
+        -2px 2px 0 white;
 }
 
-.hero p {
+
+/* =========================
+   หัวใจ
+========================= */
+
+.heart-line {
+    margin: 20px 0;
+
+    color: #d45f88;
+
     font-size: 22px;
-    color: #777;
+
+    font-weight: bold;
+
+    text-shadow: 1px 1px white;
 }
 
-/* เนื้อหาทุกหน้า */
+
+/* My Portfolio */
+
+.small-text {
+    font-size: 18px;
+
+    color: #666;
+
+    text-shadow:
+        1px 1px 0 white;
+}
+
+
+/* =========================
+   ปุ่มลูกศรด้านล่าง
+========================= */
+
+.scroll {
+    position: absolute;
+
+    bottom: 25px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 45px;
+    height: 45px;
+
+    border: 2px solid #d88aa5;
+
+    border-radius: 50%;
+
+    color: #c85f84;
+
+    font-size: 30px;
+
+    line-height: 35px;
+
+    background: rgba(255, 255, 255, 0.70);
+
+    z-index: 3;
+}
+
+
+/* =========================
+   หน้าอื่น ๆ
+========================= */
+
 .content {
     max-width: 1000px;
+
     margin: auto;
+
     padding: 60px 25px;
 }
 
 .content h1 {
     text-align: center;
+
     font-size: 42px;
+
     color: #d66b91;
+
     margin-bottom: 40px;
 }
 
@@ -84,310 +286,71 @@ nav a:hover {
     color: #c85f84;
 }
 
-/* กล่องข้อมูล */
 .card {
     background: white;
+
     padding: 25px;
+
     margin-bottom: 25px;
+
     border-radius: 20px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+
     border: 1px solid #f5d9e2;
 }
 
 .card p {
     line-height: 1.8;
+
     font-size: 17px;
 }
 
-/* มือถือ */
+
+/* =========================
+   มือถือ
+========================= */
+
 @media (max-width: 700px) {
+
+    nav {
+        padding: 12px 5px;
+    }
 
     nav a {
         margin: 3px;
-        padding: 7px 8px;
-        font-size: 14px;
+
+        padding: 7px 9px;
+
+        font-size: 13px;
     }
 
-    .hero h1 {
-        font-size: 42px;
+    .hero {
+        min-height: calc(100vh - 60px);
+
+        background-position: center;
     }
 
-    .hero h2 {
-        font-size: 30px;
+    .decorations {
+        top: 20px;
+
+        font-size: 18px;
+    }
+
+    .hero-content {
+        padding: 20px;
+    }
+
+    .bow {
+        font-size: 32px;
+    }
+
+    .name-line {
+        width: 180px;
     }
 
     .content h1 {
         font-size: 34px;
-    }
-}
-.activity-card {
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
-    margin-top: 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-.activity-gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    margin-top: 25px;
-}
-
-.activity-gallery div {
-    text-align: center;
-}
-
-.activity-gallery img {
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
-    border-radius: 12px;
-}
-
-.activity-gallery p {
-    font-size: 16px;
-    margin-top: 8px;
-}
-
-@media (max-width: 700px) {
-    .activity-gallery {
-        grid-template-columns: 1fr;
-    }
-}
-.activity-card {
-    background: white;
-    padding: 30px;
-    margin: 30px 0;
-    border-radius: 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-}
-
-.activity-card h2 {
-    margin-bottom: 15px;
-}
-
-.activity-card h3 {
-    margin-top: 25px;
-}
-
-.certificate {
-    width: 70%;
-    max-width: 600px;
-    display: block;
-    margin: 15px auto;
-    border-radius: 12px;
-}
-
-.activity-gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    margin-top: 15px;
-}
-
-.activity-gallery img {
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
-    border-radius: 15px;
-}
-
-@media (max-width: 700px) {
-    .activity-gallery {
-        grid-template-columns: 1fr;
-    }
-
-    .certificate {
-        width: 100%;
-    }
-}
-.cover-photo {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 50%;
-    display: block;
-    margin: 0 auto 20px;
-}
-/* ===== หน้าปก Portfolio ===== */
-
-.hero {
-    position: relative;
-    overflow: hidden;
-    min-height: 85vh;
-    background: linear-gradient(135deg, #fff7fa, #ffeaf2);
-}
-
-.cover-photo {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    display: block;
-    margin: 0 auto 25px;
-    border: 6px solid white;
-    box-shadow: 0 5px 20px rgba(214,107,145,0.25);
-}
-
-.hero h1 {
-    font-size: 58px;
-    color: #d66b91;
-    letter-spacing: 4px;
-    margin: 10px 0;
-}
-
-.hero h2 {
-    font-size: 38px;
-    color: #555;
-    margin: 10px 0;
-}
-
-.hero p {
-    font-size: 20px;
-    color: #777;
-}
-
-.small-text {
-    margin-top: 20px;
-    color: #c97996;
-    font-size: 14px;
-    letter-spacing: 2px;
-}
-
-/* ของตกแต่ง */
-.decor {
-    position: absolute;
-    color: #e58ba8;
-    font-size: 35px;
-}
-
-.heart1 {
-    top: 15%;
-    left: 12%;
-}
-
-.heart2 {
-    top: 25%;
-    right: 15%;
-}
-
-.star1 {
-    top: 40%;
-    left: 8%;
-    font-size: 30px;
-}
-
-.star2 {
-    bottom: 20%;
-    right: 12%;
-    font-size: 40px;
-}
-
-.bow {
-    top: 10%;
-    right: 8%;
-    font-size: 45px;
-}
-
-@media (max-width: 700px) {
-
-    .cover-photo {
-        width: 120px;
-        height: 120px;
-    }
-
-    .hero h1 {
-        font-size: 40px;
-    }
-
-    .hero h2 {
-        font-size: 30px;
-    }
-
-    .hero p {
-        font-size: 17px;
-    }
-
-    .decor {
-        font-size: 25px;
-    }
-}
-/* COVER หน้าปก */
-.hero {
-    position: relative;
-    min-height: 85vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    text-align: center;
-}
-
-/* รูป Cover เต็มพื้นที่ */
-.cover-image {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    top: 0;
-    left: 0;
-    z-index: 0;
-}
-
-/* ทำพื้นหลังจางนิด ๆ ให้ตัวหนังสืออ่านง่าย */
-.hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(255, 240, 245, 0.25);
-    z-index: 1;
-}
-
-/* ข้อความอยู่ด้านบนรูป */
-.cover-content {
-    position: relative;
-    z-index: 2;
-}
-
-/* ตกแต่ง */
-.decor {
-    font-size: 22px;
-    color: #d66b91;
-    margin-bottom: 10px;
-}
-
-.hero h1 {
-    font-size: 60px;
-    color: #c85f84;
-    margin: 10px 0;
-    letter-spacing: 4px;
-}
-
-.hero h2 {
-    font-size: 38px;
-    color: #555;
-    margin: 10px 0;
-}
-
-.hero p {
-    font-size: 20px;
-    color: #666;
-}
-
-.small-text {
-    margin-top: 15px;
-    color: #888;
-    font-size: 15px;
-}
-
-@media (max-width: 700px) {
-    .hero h1 {
-        font-size: 42px;
-    }
-
-    .hero h2 {
-        font-size: 30px;
     }
 }
