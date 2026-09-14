@@ -3,12 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>เกียรติบัตร | Portfolio</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* ===== หน้าหลัก ===== */
+        .certificate-section {
+            max-width: 1000px;
+            margin: auto;
+            padding: 55px 25px 80px;
+        }
+
+        .certificate-section h1 {
+            text-align: center;
+            color: #d66b91;
+            font-size: 42px;
+            margin-bottom: 45px;
+        }
+
+        /* ===== กล่องเกียรติบัตร ===== */
+        .certificate-box {
+            background: rgba(255,255,255,0.95);
+            border: 1px solid #f3d5df;
+            border-radius: 28px;
+            padding: 30px;
+            margin: 35px auto;
+            max-width: 900px;
+            text-align: center;
+
+            box-shadow:
+                0 8px 25px rgba(214,107,145,0.12);
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* ตกแต่งมุม */
+        .certificate-box::before {
+            content: "♡";
+            position: absolute;
+            top: 12px;
+            left: 20px;
+            font-size: 28px;
+            color: #e7a4ba;
+        }
+
+        .certificate-box::after {
+            content: "✦";
+            position: absolute;
+            bottom: 12px;
+            right: 22px;
+            font-size: 25px;
+            color: #e7a4ba;
+        }
+
+        .certificate-box h2 {
+            color: #c85f84;
+            font-size: 25px;
+            margin-bottom: 25px;
+        }
+
+        .certificate-box p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        /* ===== รูปเกียรติบัตร ===== */
+        .certificate-img {
+            display: block;
+
+            width: 75%;
+            max-width: 620px;
+
+            height: auto;
+
+            margin: 20px auto;
+
+            border-radius: 15px;
+            border: 5px solid white;
+
+            box-shadow:
+                0 6px 20px rgba(0,0,0,0.15);
+
+            transition: 0.3s;
+        }
+
+        .certificate-img:hover {
+            transform: scale(1.02);
+        }
+
+        /* ===== เส้นตกแต่ง ===== */
+        .cute-line {
+            width: 100px;
+            height: 4px;
+            background: #e7a4ba;
+            border-radius: 20px;
+            margin: 10px auto 25px;
+            position: relative;
+        }
+
+        .cute-line::after {
+            content: "♥";
+            position: absolute;
+            left: 50%;
+            top: -12px;
+            transform: translateX(-50%);
+            background: white;
+            padding: 0 8px;
+            color: #d66b91;
+        }
+
+        /* ===== มือถือ ===== */
+        @media (max-width: 700px) {
+
+            .certificate-section {
+                padding: 40px 15px;
+            }
+
+            .certificate-section h1 {
+                font-size: 34px;
+            }
+
+            .certificate-box {
+                padding: 20px 15px;
+                margin: 25px auto;
+            }
+
+            .certificate-box h2 {
+                font-size: 21px;
+            }
+
+            .certificate-img {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+
+    </style>
 </head>
 
 <body>
 
+<!-- เมนู -->
 <nav>
     <a href="index.html">หน้าแรก</a>
     <a href="about.html">ประวัติ</a>
@@ -19,51 +159,54 @@
     <a href="contact.html">ติดต่อ</a>
 </nav>
 
-<section class="content">
+
+<section class="certificate-section">
 
     <h1>เกียรติบัตร</h1>
 
-    <!-- เกียรติบัตรผู้นำเชียร์ -->
+
+    <!-- เกียรติบัตรคัดลายมือ -->
     <div class="certificate-box">
-        <h2>เกียรติบัตรกิจกรรมผู้นำเชียร์</h2>
 
-        <img src="S__75776005.jpg"
-             alt="เกียรติบัตรกิจกรรมผู้นำเชียร์"
-             class="certificate-img">
+        <h2>เกียรติบัตรการประกวดคัดลายมือภาษาจีน</h2>
 
-        <p>
-            ได้เข้าร่วมกิจกรรมผู้นำเชียร์
-            และมีส่วนร่วมในการทำกิจกรรมของโรงเรียน
-        </p>
-    </div>
+        <div class="cute-line"></div>
 
-    <!-- เกียรติบัตรคัดลายมือภาษาจีน -->
-    <div class="certificate-box">
-        <h2>การประกวดคัดลายมือภาษาจีน</h2>
-
-        <img src="S__75776020.jpg"
-             alt="เกียรติบัตรคัดลายมือภาษาจีน"
-             class="certificate-img">
+        <img
+            src="S__75776020.jpg"
+            alt="เกียรติบัตรการประกวดคัดลายมือภาษาจีน"
+            class="certificate-img"
+        >
 
         <p>
             เข้าร่วมโครงการประกวดคัดลายมือภาษาจีน
             ระดับมัธยมศึกษาตอนปลาย
         </p>
+
     </div>
 
-    <!-- เกียรติบัตรการแข่งขันเต้น -->
-    <div class="certificate-box">
-        <h2>การแข่งขัน BBU DANCE CONTEST</h2>
 
-        <img src="S__75776021.jpg"
-             alt="เกียรติบัตรการแข่งขันเต้น"
-             class="certificate-img">
+    <!-- เกียรติบัตรแข่งขันเต้น -->
+    <div class="certificate-box">
+
+        <h2>รางวัลรองชนะเลิศอันดับ 2<br>
+        BBU DANCE CONTEST</h2>
+
+        <div class="cute-line"></div>
+
+        <img
+            src="S__75776021.jpg"
+            alt="เกียรติบัตรการแข่งขัน BBU DANCE CONTEST"
+            class="certificate-img"
+        >
 
         <p>
-            <strong>ผลรางวัล:</strong>
-            รองชนะเลิศอันดับ 2
+            ได้รับรางวัลรองชนะเลิศอันดับ 2
+            จากการแข่งขัน BBU DANCE CONTEST
         </p>
+
     </div>
+
 
 </section>
 
