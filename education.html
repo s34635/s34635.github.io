@@ -3,12 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>การศึกษา | Portfolio</title>
+
+    <title>ประวัติการศึกษา | Portfolio</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        body {
+            background: #fff8fb;
+        }
+
+        .education-page {
+            max-width: 1000px;
+            margin: auto;
+            padding: 70px 25px;
+            position: relative;
+        }
+
+        /* หัวข้อ */
+        .education-title {
+            text-align: center;
+            color: #d65f88;
+            font-size: 42px;
+            margin-bottom: 45px;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .education-title::before {
+            content: "♡";
+            position: absolute;
+            left: 25%;
+            top: -20px;
+            font-size: 25px;
+            color: #e99ab4;
+        }
+
+        .education-title::after {
+            content: "✦";
+            position: absolute;
+            right: 25%;
+            top: -15px;
+            font-size: 25px;
+            color: #e99ab4;
+        }
+
+        /* กล่อง */
+        .edu-box {
+            background: rgba(255,255,255,0.95);
+            border: 2px solid #f4d5df;
+            border-radius: 25px;
+            padding: 35px 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 25px rgba(214,95,136,0.10);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .edu-box::before {
+            content: "♡";
+            position: absolute;
+            right: 25px;
+            top: 15px;
+            color: #efb1c5;
+            font-size: 30px;
+        }
+
+        .edu-box::after {
+            content: "✦";
+            position: absolute;
+            left: 25px;
+            bottom: 15px;
+            color: #efb1c5;
+            font-size: 20px;
+        }
+
+        .edu-box h2 {
+            color: #d65f88;
+            font-size: 25px;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .edu-box p {
+            color: #666;
+            font-size: 17px;
+            line-height: 1.9;
+            margin: 8px 0;
+        }
+
+        /* ไฮไลต์ */
+        .highlight {
+            color: #d65f88;
+            font-weight: bold;
+        }
+
+        /* กล่องความสนใจ */
+        .interest-box {
+            background: linear-gradient(
+                135deg,
+                #fff0f5,
+                #ffe5ee
+            );
+            border: 2px solid #f2c5d5;
+            border-radius: 25px;
+            padding: 35px 40px;
+            margin-top: 30px;
+            box-shadow: 0 8px 25px rgba(214,95,136,0.12);
+            position: relative;
+        }
+
+        .interest-box h2 {
+            color: #cf5b83;
+            margin-top: 0;
+            font-size: 25px;
+        }
+
+        .interest-box p {
+            color: #666;
+            font-size: 17px;
+            line-height: 2;
+        }
+
+        /* จุดเด่นเล็ก ๆ */
+        .interest-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 25px;
+        }
+
+        .interest-item {
+            background: white;
+            border-radius: 18px;
+            padding: 20px 15px;
+            text-align: center;
+            border: 1px solid #f3d5df;
+            box-shadow: 0 5px 15px rgba(214,95,136,0.08);
+        }
+
+        .interest-item .icon {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .interest-item h3 {
+            color: #d65f88;
+            font-size: 17px;
+            margin: 5px 0;
+        }
+
+        .interest-item p {
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* ของตกแต่งด้านล่าง */
+        .decoration {
+            text-align: center;
+            color: #df86a3;
+            font-size: 22px;
+            letter-spacing: 10px;
+            margin-top: 35px;
+        }
+
+        @media (max-width: 700px) {
+
+            .education-page {
+                padding: 45px 18px;
+            }
+
+            .education-title {
+                font-size: 34px;
+            }
+
+            .edu-box,
+            .interest-box {
+                padding: 25px 22px;
+            }
+
+            .interest-list {
+                grid-template-columns: 1fr;
+            }
+
+            .education-title::before {
+                left: 5%;
+            }
+
+            .education-title::after {
+                right: 5%;
+            }
+        }
+
+    </style>
 </head>
 
 <body>
 
+<!-- เมนู -->
 <nav>
     <a href="index.html">หน้าแรก</a>
     <a href="about.html">ประวัติ</a>
@@ -16,24 +210,99 @@
     <a href="activities.html">กิจกรรม</a>
     <a href="projects.html">ผลงาน</a>
     <a href="certificates.html">เกียรติบัตร</a>
+    <a href="contact.html">ติดต่อ</a>
 </nav>
 
-<section class="content">
 
-    <h1>ประวัติการศึกษา</h1>
+<!-- เนื้อหา -->
+<section class="education-page">
 
-    <div class="card">
-        <h2>ระดับมัธยมศึกษาตอนปลาย</h2>
-        <p>มัธยมศึกษาปีที่ 6 ห้อง 8</p>
-        <p>แผนการเรียนภาษาจีน</p>
+    <h1 class="education-title">
+        ประวัติการศึกษา
+    </h1>
+
+
+    <!-- ประวัติการศึกษา -->
+    <div class="edu-box">
+
+        <h2>🎓 ระดับมัธยมศึกษาตอนปลาย</h2>
+
+        <p>
+            <span class="highlight">มัธยมศึกษาปีที่ 6 ห้อง 8</span>
+        </p>
+
+        <p>
+            แผนการเรียนภาษาจีน
+        </p>
+
+        <p>
+            โรงเรียนบ้านบึงอุตสาหกรรมนุเคราะห์
+        </p>
+
+        <p>
+            มุ่งเน้นการเรียนรู้ด้านภาษา การสื่อสาร
+            และการพัฒนาทักษะภาษาจีนควบคู่กับการเรียนรู้ในด้านอื่น ๆ
+        </p>
+
     </div>
 
-    <div class="card">
-        <h2>ความสนใจด้านการศึกษา</h2>
+
+    <!-- ความสนใจ -->
+    <div class="interest-box">
+
+        <h2>♡ ความสนใจด้านการศึกษา</h2>
+
         <p>
-            สนใจการเรียนภาษาจีน การสื่อสารภาษาจีน
-            และการนำความรู้ด้านภาษาไปต่อยอดในการศึกษาระดับมหาวิทยาลัย
+            ฉันมีความสนใจในด้าน
+            <span class="highlight">ภาษาจีน การสื่อสาร และวัฒนธรรมจีน</span>
+            เพราะมองว่าภาษาเป็นมากกว่าการเรียนในห้องเรียน
+            แต่เป็นโอกาสในการเปิดโลกและทำความรู้จักผู้คนที่หลากหลาย
         </p>
+
+        <p>
+            การเรียนภาษาจีนทำให้ฉันได้ฝึกทั้งการฟัง พูด อ่าน และเขียน
+            รวมถึงได้เรียนรู้วัฒนธรรมและมุมมองใหม่ ๆ
+            ซึ่งเป็นทักษะที่ฉันอยากนำไปต่อยอดในการศึกษาระดับมหาวิทยาลัย
+            และในอนาคต
+        </p>
+
+
+        <!-- จุดเด่น -->
+        <div class="interest-list">
+
+            <div class="interest-item">
+                <div class="icon">🇨🇳</div>
+                <h3>ภาษาจีน</h3>
+                <p>
+                    สนใจการเรียนรู้และพัฒนาทักษะภาษาจีน
+                </p>
+            </div>
+
+
+            <div class="interest-item">
+                <div class="icon">💬</div>
+                <h3>การสื่อสาร</h3>
+                <p>
+                    ชอบเรียนรู้การสื่อสารและการใช้ภาษา
+                </p>
+            </div>
+
+
+            <div class="interest-item">
+                <div class="icon">🌸</div>
+                <h3>วัฒนธรรม</h3>
+                <p>
+                    สนใจวัฒนธรรมและเรื่องราวของประเทศจีน
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="decoration">
+        ♡　✦　♡　✦　♡
     </div>
 
 </section>
